@@ -9,7 +9,7 @@ class BookController extends Controller
 {
     public function create()
     {
-        return view('books.add');
+        return view('books.create');
     }
 
     public function store(Request $request)
@@ -22,6 +22,11 @@ class BookController extends Controller
         ]);
         Book::create($validated);
 
-        return "success";
+        return redirect("books/index");
+    }
+    public function index()
+    {
+        $books = Book::all();
+        return view('books.index', compact('books'));
     }
 }

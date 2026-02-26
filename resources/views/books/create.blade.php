@@ -7,7 +7,7 @@
 </head>
 <body>
     <h1>Add a book</h1>
-    <form action="/books/add" method="post">
+    <form action="/books/create" method="post">
         @csrf
 
         <div>
@@ -17,10 +17,6 @@
         <div>
             <label for="author">Author</label>
             <input type="text" name="author" id="author">
-        </div>
-        <div>
-            <label for="title">Title</label>
-            <input type="text" name="title" id="title">
         </div>
         <div>
             <label for="date">Released at</label>
